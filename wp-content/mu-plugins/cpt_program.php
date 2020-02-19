@@ -65,7 +65,7 @@ function wpu_program_related_campus_metabox()
 // save values
 function wpu_program_related_campus_save($post_id)
 {
-    $campus_count = count($_POST['related_campus_field']);
+    $campus_count = !empty($_POST['related_campus_field']) ? count($_POST['related_campus_field']) : 0;
     // echo "<pre>" . print_r(array($campus_count, $_POST['related_campus_field']), true) . "</pre>";
 
     if ($campus_count > 0) {

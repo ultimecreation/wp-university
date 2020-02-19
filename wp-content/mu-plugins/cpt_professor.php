@@ -10,7 +10,7 @@ function professor_post_type()
 {
     register_post_type('professor', array(
         'public' => true,
-        'supports' => array('title', 'editor', 'excerpt'),
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
         'menu_icon' => 'dashicons-universal-access-alt',
         'has_archive' => true,
         'rewrite' => array('slug' => 'professeurs'),
