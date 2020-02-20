@@ -2,5 +2,92 @@
 Author Name: Ultime
 Theme Name: WP-University
 */
+//////////////////////
+// DEFAULT
+//////////////////////
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.55;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+p {
+  max-width: 65ch;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", serif;
+  line-height: 0.9;
+}
 body {
+  overflow-x: hidden;
+}
+//////////////////////
+// VARIABLES
+//////////////////////
+$primary: #004682;
+$secondary: #e1e1e1;
+$danger: #9b0436fd;
+//////////////////////
+// NAVBAR
+//////////////////////
+#navbar {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h1 {
+      display: block;
+    }
+    .hamburger {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      border: black 1px solid;
+      padding: 3px;
+      border-radius: 5px;
+      span {
+        background: #000;
+        display: block;
+        width: 90%;
+
+        height: 4px;
+        margin: 1;
+      }
+    }
+    .menu-menu-principal-container {
+      position: absolute;
+      left: -15rem;
+      top: 0;
+      width: 15rem;
+      height: 100%;
+      padding: 1rem;
+      background: $primary;
+      display: inline-block;
+      display: flex;
+      transition: left 0.8s ease-in-out;
+      ul {
+        margin-top: 2rem;
+        list-style: none;
+        li a {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: bold;
+          color: $secondary;
+        }
+      }
+    }
+  }
 }

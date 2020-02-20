@@ -16,5 +16,8 @@ function wpu_setup_theme()
     // add theme support
     add_theme_support('post-thumbnails');
 
-    // en
+    // register nav menu
+    register_nav_menus(array(
+        'primary_menu' => __('Menu Principal', 'text_domain')
+    ));
 }

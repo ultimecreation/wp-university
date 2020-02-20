@@ -10,3 +10,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+    <div id="navbar">
+        <div class="container">
+            <h1 class="brand"><strong>Acme</strong><span>Université</span></h1>
+
+            <?php wp_nav_menu(array('theme_location' => 'primary_menu')); ?>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
