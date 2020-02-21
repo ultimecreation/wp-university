@@ -5,11 +5,62 @@
         <div class="container">
             <figure>
                 <img src=<?php echo get_template_directory_uri() . "/assets/img/header-1.jpg"; ?> alt="">
+                <figcaption>
+                    <div class="slogan">
+                        <h2>Notre Travail.</h2>
+                        <h2>Votre Réussite.</h2>
+                    </div>
+                </figcaption>
             </figure>
         </div>
     </section>
-    <section id="test">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium perferendis voluptates atque ex sed enim sunt reprehenderit quis temporibus earum, amet expedita, ipsam animi odio placeat, cupiditate excepturi! Illo quisquam ullam dolorem odio eveniet quis voluptatibus obcaecati nihil voluptates culpa, numquam, iste maxime vero libero non aut. Adipisci molestiae vero pariatur beatae explicabo aperiam officiis velit alias animi ea! Enim magni atque saepe sequi dignissimos est totam explicabo officiis perferendis placeat? Itaque, delectus cum minima dolor adipisci totam, repudiandae ipsum distinctio magni voluptatum voluptatem beatae iusto! Alias quis sunt minima? Eligendi quae dolores doloribus tempore quia qui non, numquam doloremque blanditiis. Atque tempora porro, sed eos repudiandae dolorem enim delectus adipisci quas exercitationem iste aperiam beatae dolores possimus ea quos vitae sunt fugit vero tenetur nobis nemo, ex perferendis. At voluptatibus amet error aliquam minus omnis ea magnam. Minima eum aliquam quod perferendis, corporis dolorem quia ut quibusdam rem cumque ea odio distinctio saepe nostrum harum eaque neque, assumenda repellendus quisquam tempora earum quam doloremque asperiores! Iusto voluptatem repudiandae optio veniam deserunt nostrum ipsa aspernatur fugit consequuntur sapiente ab deleniti et recusandae reiciendis non, quia quis! Blanditiis corporis rem nihil, repellendus est sed veritatis a. Ad nostrum nihil excepturi explicabo?</p>
+    <?php
+    $events = new WP_Query(array(
+        'post_type' => 'event',
+        'posts_per_page' => 2
+    ));
+    //echo "<pre>" . print_r(get_post_meta(get_the_ID(), 'event_date'), true) . "</pre>"; 
+    ?>
+    <?php if ($events->found_posts > 0) : ?>
+        <section id="events">
+            <header>
+                <h1>Événements</h1>
+            </header>
+            <?php while ($events->have_posts()) : $events->the_post(); ?>
+                <article class="event-post">
+                    <div class="card-header">
+                        <?php $date = get_post_meta(get_the_ID(), 'event_date', true);
+                        $date = new \DateTime($date);
+                        echo $date;
+                        ?>
+
+                        <p><?php echo get_date_from_gmt(get_post_meta(get_the_ID(), 'event_date', true), 'H:i'); ?></p>
+
+                    </div>
+                    <div class="card-body">
+                        <h3><?php the_title(); ?></h3>
+                        <p><?php the_excerpt(); ?></p>
+                    </div>
+                </article>
+
+            <?php endwhile; ?>
+
+
+
+        </section>
+    <?php else : ?>
+        <p></p>
+
+    <?php endif; ?>
+    <section id="campus">
+        <header>
+            <h1>Campus</h1>
+        </header>
+    </section>
+    <section id="professors">
+        <header>
+            <h1>Professeurs</h1>
+        </header>
     </section>
 </main>
 <?php get_footer(); ?>

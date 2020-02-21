@@ -94,7 +94,7 @@ $danger: #9b0436fd;
   }
 }
 //////////////////////
-// FRONT-PAGE
+// START FRONT-PAGE
 //////////////////////
 main#front-page {
   #header {
@@ -103,11 +103,18 @@ main#front-page {
         background: $primary;
         clip-path: polygon(0 0, 100% 0%, 100% 90%, 50% 99%, 0 90%);
         position: relative;
-        z-index: -1;
+
         img {
           background-size: cover;
           width: 100%;
           opacity: 0.15;
+        }
+        figcaption {
+          position: absolute;
+          color: $secondary;
+          top: 70%;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }
@@ -115,4 +122,12 @@ main#front-page {
       background: #000;
     }
   }
+  #events {
+    .event-post {
+      display: flex;
+    }
+  }
 }
+//////////////////////
+// END FRONT-PAGE
+//////////////////////
