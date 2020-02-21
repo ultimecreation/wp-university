@@ -3,31 +3,23 @@ window.addEventListener("DOMContentLoaded", () => {
   ////////////////
   // VARIABLES
   ////////////////
-  const menu = document.querySelector(".menu-menu-principal-container");
+  const menu = document.querySelector("#responsive-menu");
   const hamburgerBtn = document.querySelector(".hamburger");
+
   ////////////////
   // FUNCTIONS
   ////////////////
   const toggleMenu = () => {
-    // get the closeBtn if existing else create it
-    let closeBtn = document.querySelector(".closeBtn");
-    if (!closeBtn) {
-      closeBtn = document.createElement("p");
-      closeBtn.classList.add("closeBtn");
-      closeBtn.innerHTML = "Fermer X";
-      menu.style.cssText =
-        "flex;flex-direction:column;cursor:pointer;color:white";
-    }
-
-    // insert closeBtn before the ul
-    menu.insertBefore(closeBtn, menu.firstChild);
-
-    // toggle the menu via the menu button
-    menu.style.left = menu.style.left === "0rem" ? "-15rem" : "0rem";
-
-    // or close the menu via the closeBtn
-    closeBtn.addEventListener("click", () => (menu.style.left = "-15rem"));
+    menu.style.height = menu.style.height == "100vh" ? "0px" : "100vh";
+    menu.style.opacity = menu.style.opacity == "1" ? "0" : "1";
+    hamburgerBtn.innerHTML =
+      hamburgerBtn.innerHTML === "X"
+        ? `<span></span>
+    <span></span>
+    <span></span>`
+        : "X";
   };
+
   ////////////////
   // EVENT LISTENERS
   ////////////////
