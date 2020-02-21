@@ -53,6 +53,7 @@ $danger: #9b0436fd;
   background: $primary;
   position: fixed;
   width: 100%;
+  z-index: 1;
   .container {
     display: flex;
     justify-content: space-around;
@@ -98,33 +99,48 @@ $danger: #9b0436fd;
 //////////////////////
 main#front-page {
   #header {
-    .container {
-      figure {
-        background: $primary;
-        clip-path: polygon(0 0, 100% 0%, 100% 90%, 50% 99%, 0 90%);
-        position: relative;
+    figure {
+      background: $primary;
+      clip-path: polygon(0 0, 100% 0%, 100% 90%, 50% 99%, 0 90%);
+      position: relative;
 
-        img {
-          background-size: cover;
-          width: 100%;
-          opacity: 0.15;
-        }
-        figcaption {
-          position: absolute;
-          color: $secondary;
-          top: 70%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
+      img {
+        background-size: cover;
+        width: 100%;
+        opacity: 0.15;
       }
-    }
-    #test {
-      background: #000;
+      figcaption {
+        position: absolute;
+        color: $secondary;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
   #events {
     .event-post {
-      display: flex;
+      figure {
+        .event-img {
+          position: relative;
+          width: 95%;
+          margin: 0 auto;
+          img {
+            width: 100%;
+            max-height: 350px;
+          }
+          figcaption {
+            .card-date {
+              position: absolute;
+              top: 0;
+            }
+            .card-body {
+              position: absolute;
+              bottom: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
