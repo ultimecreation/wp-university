@@ -127,7 +127,7 @@ main#front-page {
           margin: 0 auto;
           img {
             width: 100%;
-            max-height: 350px;
+            height: 350px;
           }
           figcaption {
             .card-date {
@@ -143,7 +143,36 @@ main#front-page {
       }
     }
   }
+  #campus {
+    header {
+    }
+    .campus-post {
+      figure {
+        position: relative;
+        .campus-img {
+          width: 95%;
+          margin: 0 auto;
+          img {
+            width: 100%;
+            height: 300px;
+          }
+          figcaption {
+            h3 {
+              position: absolute;
+              top: 0;
+            }
+
+            p {
+              bottom: 0;
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 //////////////////////
 // END FRONT-PAGE
 //////////////////////
