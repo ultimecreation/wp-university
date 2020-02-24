@@ -14,6 +14,8 @@ Theme Name: WP-University
 }
 .container {
   max-width: 1200px;
+  overflow-x: hidden;
+
   margin: 0 auto;
 }
 p {
@@ -29,7 +31,6 @@ h6 {
   line-height: 0.9;
 }
 body {
-  overflow-x: hidden;
 }
 //////////////////////
 // VARIABLES
@@ -45,6 +46,10 @@ $danger: #9b0436fd;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem;
+}
+@mixin container-90-center {
+  width: 90%;
+  margin: 1rem auto;
 }
 //////////////////////
 // NAVBAR
@@ -99,44 +104,90 @@ $danger: #9b0436fd;
 //////////////////////
 main#front-page {
   #header {
-    figure {
+    display: block;
+    height: 92.5vh;
+    background: url("./assets/img/header-1.jpg") center center/cover;
+    width: 100%;
+    position: relative;
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    margin-bottom: -4.5rem;
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      opacity: 0.75;
       background: $primary;
-      clip-path: polygon(0 0, 100% 0%, 100% 90%, 50% 99%, 0 90%);
-      position: relative;
-
-      img {
-        background-size: cover;
-        width: 100%;
-        opacity: 0.15;
-      }
-      figcaption {
-        position: absolute;
-        color: $secondary;
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+    }
+    .slogan {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      width: 90%;
+      color: $secondary;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      font-size: 1.8rem;
     }
   }
   #events {
-    .event-post {
-      figure {
-        .event-img {
-          position: relative;
-          width: 95%;
-          margin: 0 auto;
-          img {
-            width: 100%;
-            height: 350px;
-          }
-          figcaption {
-            .card-date {
-              position: absolute;
-              top: 0;
+    padding: 4.5rem 0;
+    margin-bottom: -2.5rem;
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0, 50% 10%);
+    .container {
+      header {
+        padding: 2rem 0;
+        font-size: 2rem;
+        text-align: center;
+        color: $primary;
+      }
+      .event-post {
+        figure {
+          .event-img {
+            overflow: hidden;
+            position: relative;
+            @include container-90-center;
+            img {
+              width: 100%;
+              height: 350px;
             }
-            .card-body {
-              position: absolute;
-              bottom: 0;
+            figcaption {
+              color: $secondary;
+
+              .card-date {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                  background: $danger;
+
+                  position: relative;
+                  text-transform: uppercase;
+                  opacity: 0.95;
+                  &:nth-of-type(1) {
+                    top: 1.25rem;
+                    left: -2.5rem;
+                    padding: 0.5rem 2rem;
+                    transform: rotateZ(-45deg);
+                  }
+                  &:nth-of-type(2) {
+                    padding: 0.5rem;
+                  }
+                }
+              }
+              .card-body {
+                position: absolute;
+                bottom: 0;
+                background: $danger;
+                opacity: 0.75;
+                padding: 0.5rem;
+                h3 {
+                  margin-bottom: 1rem;
+                }
+              }
             }
           }
         }
@@ -144,35 +195,199 @@ main#front-page {
     }
   }
   #campus {
-    header {
-    }
-    .campus-post {
-      figure {
-        position: relative;
-        .campus-img {
-          width: 95%;
-          margin: 0 auto;
-          img {
-            width: 100%;
-            height: 300px;
-          }
-          figcaption {
-            h3 {
-              position: absolute;
-              top: 0;
-            }
+    background: $danger;
+    padding: 5.5rem 0 6.5rem 0;
+    margin-bottom: -5rem;
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0, 50% 10%);
 
-            p {
-              bottom: 0;
-              position: absolute;
+    .container {
+      header {
+        padding: 2rem 0;
+        font-size: 2rem;
+        text-align: center;
+        color: $secondary;
+      }
+      .campus-post {
+        figure {
+          position: relative;
+          .campus-img {
+            position: relative;
+
+            @include container-90-center;
+            img {
+              width: 100%;
+              height: 300px;
+            }
+            figcaption {
+              color: $secondary;
+              opacity: 0.75;
+
+              h3 {
+                position: absolute;
+                background: $primary;
+                top: 0;
+                right: 0;
+                padding: 0.5rem;
+              }
+
+              .excerpt {
+                background: $primary;
+                bottom: 0;
+                padding: 1rem;
+                position: absolute;
+              }
             }
           }
         }
       }
     }
   }
+  #programs {
+    padding: 4.5rem 0;
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0, 50% 10%);
+    .container {
+      header {
+        padding: 2rem 0;
+        font-size: 2rem;
+        text-align: center;
+        color: $primary;
+      }
+      article {
+        @include container-90-center;
+        background: $primary;
+        padding: 1rem;
+        color: $secondary;
+        p {
+          margin: 2rem auto;
+        }
+        .related-campus > a {
+          text-decoration: none;
+          color: $secondary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  #professors {
+    background: $primary;
+    padding: 4.5rem 0;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% 10%);
+    .container {
+      header {
+        padding: 2rem 0;
+        font-size: 2rem;
+        text-align: center;
+        color: $secondary;
+      }
+      article {
+        min-height: 10rem;
+        background: $secondary;
+        position: relative;
+        @include container-90-center;
+        figure {
+          display: flex;
+          width: 100%;
+          overflow: hidden;
+          img {
+            border-radius: 0 0 50% 0;
+            box-shadow: 1px 1px 5px 2px rgba(0, 70, 130, 0.3);
+          }
+          figcaption {
+            width: 100%;
+            text-align: center;
+            align-self: center;
+          }
+        }
+        .professor-info {
+          width: 100%;
+          p,
+          small {
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }
-
+footer {
+  background: $primary;
+  color: $secondary;
+}
 //////////////////////
 // END FRONT-PAGE
 //////////////////////
+@media screen and( min-width:768px) {
+  main#front-page {
+    #header {
+      .slogan {
+        font-size: 3rem;
+      }
+    }
+    #events {
+      margin: 2rem auto;
+      .container {
+        header {
+          margin: 2rem auto;
+          font-size: 3rem;
+        }
+        .event-post {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    #campus {
+      margin: 5rem auto;
+      padding-bottom: 10rem;
+      .container {
+        header {
+          margin: 2rem auto;
+          font-size: 3rem;
+        }
+        .campus-post {
+          display: flex;
+          justify-content: space-between;
+          article {
+            max-width: 45%;
+          }
+        }
+      }
+    }
+    #programs {
+      margin: -6rem auto 2rem auto;
+      .container {
+        header {
+          margin: 2rem auto;
+          font-size: 3rem;
+        }
+        .program-post {
+          display: flex;
+          justify-content: space-between;
+          article {
+            max-width: 40%;
+          }
+        }
+      }
+    }
+    #professors {
+      margin: 5rem auto 0 auto;
+      .container {
+        header {
+          margin: 2rem auto;
+          font-size: 3rem;
+        }
+        .professor-post {
+          display: flex;
+          justify-content: space-between;
+          article {
+            max-width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
