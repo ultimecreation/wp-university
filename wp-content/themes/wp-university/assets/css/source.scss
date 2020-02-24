@@ -67,6 +67,9 @@ $danger: #9b0436fd;
       display: block;
       color: $secondary;
     }
+    #full-width-menu #menu-menu-principal {
+      display: none;
+    }
     .hamburger {
       cursor: pointer;
       color: $secondary;
@@ -320,7 +323,45 @@ footer {
 //////////////////////
 // END FRONT-PAGE
 //////////////////////
-@media screen and( min-width:768px) {
+@media screen and( min-width:800px) {
+  //////////////////////
+  // NAVBAR
+  //////////////////////
+  #navbar {
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      h1 {
+        display: block;
+        color: $secondary;
+      }
+      #full-width-menu {
+        #menu-menu-principal {
+          display: block;
+          display: flex;
+          justify-content: space-around;
+          list-style: none;
+          width: 100%;
+          li {
+            text-align: center;
+            a {
+              color: $secondary;
+              padding: 0.5rem 1rem;
+              text-decoration: none;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+
+      .hamburger {
+        display: none;
+        span {
+        }
+      }
+    }
+  }
   main#front-page {
     #header {
       .slogan {

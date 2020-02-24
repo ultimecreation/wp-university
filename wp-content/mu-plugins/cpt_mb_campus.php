@@ -9,7 +9,7 @@ function campus_post_type()
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
         'menu_icon' => 'dashicons-admin-multisite',
         'has_archive' => true,
-        'rewrite' => array('slug' => 'campus'),
+        'rewrite' => array('slug' => 'sites'),
         'menu_position' => 5,
         'labels' => array(
             'name' => 'Campus',

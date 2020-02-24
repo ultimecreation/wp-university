@@ -13,7 +13,7 @@ function professor_post_type()
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
         'menu_icon' => 'dashicons-universal-access-alt',
         'has_archive' => true,
-        'rewrite' => array('slug' => 'professeurs'),
+        'rewrite' => array('slug' => 'les-professeurs'),
         'menu_position' => 5,
         'labels' => array(
             'name' => 'Professeurs',

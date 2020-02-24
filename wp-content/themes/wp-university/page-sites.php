@@ -4,5 +4,5 @@
 <br>
 <br>
 
-<h1>Contact</h1>
+<h1>tous les sites</h1>
 <?php get_footer(); ?>
