@@ -23,6 +23,7 @@
                     <div class="professor-detail">
                         <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
+                        <p class="contact"><strong>Contact:</strong> <?php echo get_post_meta(get_the_ID(), 'email', true); ?> </p>
                     </div>
 
 

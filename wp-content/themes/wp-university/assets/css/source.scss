@@ -331,7 +331,7 @@ main#all-events {
   article {
     margin: 2rem auto;
     padding: 1rem;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     @include container-90-center;
     h2 {
       margin: 2rem auto;
@@ -351,7 +351,7 @@ main#all-programs {
   article {
     margin: 2rem auto;
     padding: 1rem;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     @include container-90-center;
     h2 {
       margin: 2rem auto;
@@ -366,7 +366,7 @@ main#all-campus {
   article {
     margin: 2rem auto;
     padding: 1rem;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     @include container-90-center;
     h2 {
       margin: 2rem auto;
@@ -381,10 +381,13 @@ main#all-professors {
   article {
     margin: 2rem auto;
     padding: 1rem;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     @include container-90-center;
     h2 {
       margin: 2rem auto;
+    }
+    .contact {
+      margin: 1rem auto;
     }
   }
 }
@@ -558,13 +561,21 @@ main#all-professors {
   //////////////////////
   main#all-professors {
     padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
     article {
+      display: flex;
+      align-items: center;
       margin: 2rem auto;
       padding: 1rem;
       box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
       @include container-90-center;
-      h2 {
-        margin: 2rem auto;
+      .professor-detail {
+        max-width: 60%;
+        margin: 0 auto;
+        .contact {
+          margin: 1rem auto;
+        }
       }
     }
   }

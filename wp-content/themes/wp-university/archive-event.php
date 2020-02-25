@@ -21,10 +21,10 @@
                     <?php the_content(); ?>
                     <div class="date-hour">
                         <p>Le
-                            <?php echo date_i18n('d M Y', strtotime(get_post_meta(get_the_ID(), 'event_date', true))); ?>
+                            <strong><?php echo date_i18n('d M Y', strtotime(get_post_meta(get_the_ID(), 'event_date', true))); ?></strong>
                         </p>
                         <p>à
-                            <?php echo get_post_meta(get_the_ID(), 'event_hour', true); ?>
+                            <strong><?php echo get_post_meta(get_the_ID(), 'event_hour', true); ?></strong>
                         </p>
                     </div>
 
