@@ -517,9 +517,6 @@ main#all-professors {
         display: flex;
         justify-content: space-around;
       }
-      &::nth-of-type(odd) {
-        justify-self: flex-start;
-      }
     }
   }
   //////////////////////
@@ -544,6 +541,8 @@ main#all-professors {
   //////////////////////
   main#all-campus {
     padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
     article {
       margin: 2rem auto;
       padding: 1rem;
