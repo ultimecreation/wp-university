@@ -14,16 +14,32 @@
         // echo "<pre>" . print_r($events, true) . "</pre>";
         ?>
         <?php if ($events->found_posts > 0) : ?>
+            <div id="map"></div>
 
             <?php while ($events->have_posts()) : $events->the_post(); ?>
-                <article>
-                    <h2><?php the_title(); ?></h2>
-                    <?php the_content(); ?>
+                <?php
+                $lat = get_post_meta(get_the_ID(), 'lat', true);
+                $lng = get_post_meta(get_the_ID(), 'lng', true);
+                $address = str_replace(' ', '_', get_post_meta(get_the_ID(), 'formatted_address', true));
 
+
+                ?>
+                <article data-lat=<?php echo $lat; ?> data-lng=<?php echo $lng; ?> data-address=<?php echo $address; ?>>
+
+                    <div class="content">
+                        <h2><?php the_title(); ?></h2>
+                        <?php the_content(); ?>
+                    </div>
+                    <div class="img">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
 
                 </article>
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
+
 </main>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAak_yvHpAgisbJ-qz4sKbNxKlRPc9zo&callback=initMap">
+</script>
 <?php get_footer(); ?>

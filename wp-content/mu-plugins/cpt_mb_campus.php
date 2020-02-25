@@ -131,7 +131,7 @@ function wpu_campus_address_save($post_id)
         $address_encoded = rawurldecode($address);
 
         // get coordinates from google
-        $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$address_encoded}&key=YOUR_KEY_HERE";
+        $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$address_encoded}&key=AIzaSyCMAak_yvHpAgisbJ-qz4sKbNxKlRPc9zo";
         $json = wp_remote_get($url);
         if (200 === (int) wp_remote_retrieve_response_code($json)) {
             $body = wp_remote_retrieve_body($json);

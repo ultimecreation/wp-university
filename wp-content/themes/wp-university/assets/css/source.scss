@@ -32,6 +32,10 @@ h6 {
 }
 body {
 }
+#map {
+  height: 700px;
+  margin: 2rem auto;
+}
 //////////////////////
 // VARIABLES
 //////////////////////
@@ -371,6 +375,13 @@ main#all-campus {
     h2 {
       margin: 2rem auto;
     }
+    .img {
+      margin: 3rem auto;
+      img {
+        width: 100%;
+        height: 350px;
+      }
+    }
   }
 }
 //////////////////////
@@ -544,15 +555,26 @@ main#all-professors {
   //////////////////////
   main#all-campus {
     padding-top: 5rem;
-    display: flex;
-    flex-direction: column;
     article {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin: 2rem auto;
       padding: 1rem;
-      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
-      @include container-90-center;
-      h2 {
-        margin: 2rem auto;
+      box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
+
+      .content {
+        width: 52.5%;
+      }
+      .img {
+        width: 42.5%;
+        img {
+          width: 100%;
+          height: 350px;
+        }
+      }
+      &:nth-of-type(even) {
+        flex-direction: row-reverse;
       }
     }
   }
