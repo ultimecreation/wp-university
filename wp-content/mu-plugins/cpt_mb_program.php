@@ -8,7 +8,7 @@ function cursus_post_type()
         'supports' => array('title', 'editor', 'excerpt'),
         'menu_icon' => 'dashicons-admin-network',
         'has_archive' => true,
-        'rewrite' => array('slug' => 'programme'),
+        'rewrite' => array('slug' => 'programmes'),
         'menu_position' => 5,
         'labels' => array(
             'name' => 'Programmes',

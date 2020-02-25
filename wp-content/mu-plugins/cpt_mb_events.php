@@ -9,7 +9,7 @@ function event_post_type()
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
         'menu_icon' => 'dashicons-megaphone',
         'has_archive' => true,
-        'rewrite' => array('slug' => 'evenemnts'),
+        'rewrite' => array('slug' => 'evenements'),
         'menu_position' => 5,
         'labels' => array(
             'name' => 'Evenements',

@@ -323,6 +323,71 @@ footer {
 //////////////////////
 // END FRONT-PAGE
 //////////////////////
+//////////////////////
+// EVENTS PAGE
+//////////////////////
+main#all-events {
+  padding-top: 5rem;
+  article {
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    @include container-90-center;
+    h2 {
+      margin: 2rem auto;
+    }
+    .date-hour {
+      margin: 2rem auto;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+//////////////////////
+// PROGRAMS PAGE
+//////////////////////
+main#all-programs {
+  padding-top: 5rem;
+  article {
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    @include container-90-center;
+    h2 {
+      margin: 2rem auto;
+    }
+  }
+}
+//////////////////////
+// CAMPUS PAGE
+//////////////////////
+main#all-campus {
+  padding-top: 5rem;
+  article {
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    @include container-90-center;
+    h2 {
+      margin: 2rem auto;
+    }
+  }
+}
+//////////////////////
+// PROFESSORS PAGE
+//////////////////////
+main#all-professors {
+  padding-top: 5rem;
+  article {
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    @include container-90-center;
+    h2 {
+      margin: 2rem auto;
+    }
+  }
+}
 @media screen and( min-width:800px) {
   //////////////////////
   // NAVBAR
@@ -428,6 +493,79 @@ footer {
             max-width: 40%;
           }
         }
+      }
+    }
+  }
+  //////////////////////
+  // EVENTS PAGE
+  //////////////////////
+  main#all-events {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    article {
+      margin: 2rem auto;
+      padding: 1rem;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+      @include container-90-center;
+      h2 {
+        margin: 2rem auto;
+      }
+      .date-hour {
+        margin: 2rem auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      &::nth-of-type(odd) {
+        justify-self: flex-start;
+      }
+    }
+  }
+  //////////////////////
+  // PROGRAMS PAGE
+  //////////////////////
+  main#all-programs {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    article {
+      margin: 2rem auto;
+      padding: 1rem;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+      @include container-90-center;
+      h2 {
+        margin: 2rem auto;
+      }
+    }
+  }
+  //////////////////////
+  // CAMPUS PAGE
+  //////////////////////
+  main#all-campus {
+    padding-top: 5rem;
+    article {
+      margin: 2rem auto;
+      padding: 1rem;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+      @include container-90-center;
+      h2 {
+        margin: 2rem auto;
+      }
+    }
+  }
+  //////////////////////
+  // PROFESSORS PAGE
+  //////////////////////
+  main#all-professors {
+    padding-top: 5rem;
+    article {
+      margin: 2rem auto;
+      padding: 1rem;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+      @include container-90-center;
+      h2 {
+        margin: 2rem auto;
       }
     }
   }
