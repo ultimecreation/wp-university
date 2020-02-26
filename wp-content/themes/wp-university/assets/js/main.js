@@ -13,6 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
   ////////////////
   const toggleMenu = () => {
     menu.style.left = menu.style.left == "0px" ? "-900px" : "0px";
+    menu.style.height = menu.style.height == "100vh" ? "0px" : "100vh";
 
     hamburgerBtn.innerHTML =
       hamburgerBtn.innerHTML === "X"

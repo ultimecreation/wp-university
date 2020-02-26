@@ -5,6 +5,7 @@
         <div class="overlay">
 
         </div>
+        <?php get_search_form(); ?>
         <div class="slogan">
             <h1>Notre Travail.</h1>
             <h1>Votre Réussite.</h1>
