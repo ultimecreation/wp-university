@@ -3,22 +3,17 @@ window.addEventListener("DOMContentLoaded", () => {
   ////////////////
   // VARIABLES
   ////////////////
-  const menu = document.querySelector("#responsive-menu");
+  const menu = document.querySelector(
+    "#responsive-menu #menu-menu-principal-1"
+  );
   const hamburgerBtn = document.querySelector(".hamburger");
-  let map;
-  const markers = [
-    { position: new google.maps.LatLng(52.511, 13.447) },
-    { position: new google.maps.LatLng(52.549, 13.422) },
-    { position: new google.maps.LatLng(52.497, 13.396) },
-    { position: new google.maps.LatLng(52.517, 13.394) }
-  ];
 
   ////////////////
   // FUNCTIONS
   ////////////////
   const toggleMenu = () => {
-    menu.style.height = menu.style.height == "100vh" ? "0px" : "100vh";
-    menu.style.opacity = menu.style.opacity == "1" ? "0" : "1";
+    menu.style.left = menu.style.left == "0px" ? "-900px" : "0px";
+
     hamburgerBtn.innerHTML =
       hamburgerBtn.innerHTML === "X"
         ? `<span></span>

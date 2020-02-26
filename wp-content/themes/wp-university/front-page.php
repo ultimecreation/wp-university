@@ -145,9 +145,10 @@
                             ", array(get_the_ID()))
                                 );
                                 if (count($related_campus) > 0) {
+                                    echo "<p><strong>lieux(x) d'enseignement:</strong></p>";
                                     foreach ($related_campus as $campus) {
 
-                                        echo "<a href=$campus->guid>$campus->post_title</a><br>";
+                                        echo "<p>$campus->post_title</p>";
                                     }
                                 }
                                 ?>
