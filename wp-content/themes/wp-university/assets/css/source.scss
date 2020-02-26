@@ -5,6 +5,29 @@ Theme Name: WP-University
 //////////////////////
 // DEFAULT
 //////////////////////
+
+//////////////////////
+// VARIABLES
+//////////////////////
+$primary: #004682;
+$secondary: #e1e1e1;
+$danger: #9b0436fd;
+$dark: #222; //////////////////////
+// MIXINS
+//////////////////////
+@mixin secondary-link-upper {
+  color: $secondary;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 1rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+}
+@mixin container-90-center {
+  width: 90%;
+  margin: 1rem auto;
+}
 * {
   margin: 0;
   padding: 0;
@@ -32,48 +55,40 @@ h6 {
 }
 body {
 }
+
 #map {
   height: 700px;
   margin: 2rem auto;
 }
-//////////////////////
-// VARIABLES
-//////////////////////
-$primary: #004682;
-$secondary: #e1e1e1;
-$danger: #9b0436fd;
-//////////////////////
-// MIXINS
-//////////////////////
-@mixin secondary-link-upper {
-  color: $secondary;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: block;
-  padding: 1rem auto;
-  text-align: center;
-  font-size: 1.5rem;
-}
-@mixin container-90-center {
-  width: 90%;
-  margin: 1rem auto;
-}
+
 //////////////////////
 // NAVBAR
 //////////////////////
+li.current-menu-item,
+li:hover {
+  background: $danger;
+  border-bottom: 1px solid $secondary;
+  a {
+    color: $secondary !important;
+  }
+  transition: all 0.2s ease-in-out;
+}
 #navbar {
   position: fixed;
   width: 100%;
   z-index: 1;
 
   .container {
+    height: 3.5rem;
     background: $primary;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    h1 {
-      display: block;
-      color: $secondary;
+    a {
+      text-decoration: none;
+      h1.brand {
+        color: $secondary !important;
+      }
     }
     #menu-menu-principal {
       display: none;
@@ -121,7 +136,7 @@ main#front-page {
   #header {
     display: block;
     height: 92.5vh;
-    background: url("./assets/img/header-1.jpg") center center/cover;
+    background: url("./assets/img/header-1.jpg") center top/cover;
     width: 100%;
     position: relative;
     clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
@@ -304,6 +319,7 @@ main#front-page {
           display: flex;
           width: 100%;
           overflow: hidden;
+          color: $dark;
           img {
             border-radius: 0 0 50% 0;
             box-shadow: 1px 1px 5px 2px rgba(0, 70, 130, 0.3);
@@ -316,6 +332,7 @@ main#front-page {
         }
         .professor-info {
           width: 100%;
+          color: $dark;
           p,
           small {
             margin: 0 auto;
@@ -341,13 +358,18 @@ footer {
 //////////////////////
 main#all-events {
   padding-top: 5rem;
+  header {
+    color: $primary;
+  }
   article {
+    color: $dark;
     margin: 2rem auto;
     padding: 1rem;
     box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     @include container-90-center;
     h2 {
       margin: 2rem auto;
+      color: $primary;
     }
     .date-hour {
       margin: 2rem auto;
@@ -361,13 +383,18 @@ main#all-events {
 //////////////////////
 main#all-programs {
   padding-top: 5rem;
+  header {
+    color: $primary;
+  }
   article {
+    color: $dark;
     margin: 2rem auto;
     padding: 1rem;
     box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     @include container-90-center;
     h2 {
       margin: 2rem auto;
+      color: $primary;
     }
   }
 }
@@ -376,13 +403,18 @@ main#all-programs {
 //////////////////////
 main#all-campus {
   padding-top: 5rem;
+  header {
+    color: $primary;
+  }
   article {
+    color: $dark;
     margin: 2rem auto;
     padding: 1rem;
     box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     @include container-90-center;
     h2 {
       margin: 2rem auto;
+      color: $primary;
     }
     .img {
       margin: 3rem auto;
@@ -398,13 +430,18 @@ main#all-campus {
 //////////////////////
 main#all-professors {
   padding-top: 5rem;
+  header {
+    color: $primary;
+  }
   article {
+    color: $dark;
     margin: 2rem auto;
     padding: 1rem;
     box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     @include container-90-center;
     h2 {
       margin: 2rem auto;
+      color: $primary;
     }
     .contact {
       margin: 1rem auto;
@@ -438,7 +475,7 @@ main#all-professors {
             text-align: center;
             a {
               color: $secondary;
-              padding: 0.25rem;
+              padding: 0.5rem;
               text-decoration: none;
               text-transform: uppercase;
             }

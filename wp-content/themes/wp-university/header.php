@@ -13,7 +13,9 @@
 
     <div id="navbar">
         <div class="container">
-            <h1 class="brand"><strong>Acme</strong><span>Université</span></h1>
+            <a href=<?php echo site_url('/'); ?>>
+                <h1 class="brand"><strong>Acme</strong><span>Université</span></h1>
+            </a>
             <div id="full-width-menu">
                 <?php wp_nav_menu(array('theme_location' => 'primary_menu')); ?>
             </div>
