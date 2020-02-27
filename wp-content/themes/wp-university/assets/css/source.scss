@@ -53,7 +53,9 @@ h6 {
   font-family: "Roboto", serif;
   line-height: 0.9;
 }
-body {
+html {
+  position: relative;
+  height: 100vh;
 }
 
 #map {
@@ -557,17 +559,25 @@ main#single {
       color: $primary;
     }
   }
+
   article {
     color: $dark;
     margin: 2rem auto;
     padding: 1rem;
     box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
-    @include container-90-center;
 
     .date-hour {
       margin: 2rem auto;
       display: flex;
       justify-content: space-around;
+    }
+  }
+  #single-campus {
+    @include container-90-center;
+    img {
+      width: 100%;
+      height: 320px;
+      margin: 2rem auto;
     }
   }
 }
@@ -847,17 +857,32 @@ main#single {
         color: $primary;
       }
     }
-    article {
-      color: $dark;
-      margin: 2rem auto;
+    article#single-professor {
+      display: flex;
       padding: 1rem;
-      box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
-      @include container-90-center;
-
-      .date-hour {
+      .img {
+        position: relative;
+        top: -4rem;
+        height: 100%;
+        img {
+          box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
+        }
+      }
+      .content {
+        padding: 1rem;
+      }
+    }
+    #single-campus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .content {
+        padding: 1rem;
+      }
+      img {
+        width: 100%;
+        height: 320px;
         margin: 2rem auto;
-        display: flex;
-        justify-content: space-around;
       }
     }
   }

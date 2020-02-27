@@ -1,7 +1,9 @@
 <footer>
     <?php wp_footer();
     ?>
-    <p>&copy; 2020</p>
+    <div class="container">
+        <p>&copy; 2020</p>
+    </div>
 </footer>
 </body>
 
