@@ -529,23 +529,15 @@ main#search {
 main#index {
   padding-top: 5rem;
   header {
-    color: $primary;
-  }
-  article {
-    color: $dark;
-    margin: 2rem auto;
-    padding: 1rem;
-    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
-    @include container-90-center;
-    h2 {
+    h1 {
       margin: 2rem auto;
       color: $primary;
     }
-    .date-hour {
-      margin: 2rem auto;
-      display: flex;
-      justify-content: space-around;
-    }
+  }
+  section {
+    color: $dark;
+    margin: 2rem auto;
+    @include container-90-center;
   }
 }
 //////////////////////
@@ -601,6 +593,52 @@ main#single {
     }
     .content {
       padding: 1rem;
+    }
+  }
+}
+//////////////////////
+// CONTACT FORM
+//////////////////////
+main#contact {
+  padding-top: 5rem;
+  header {
+    h1 {
+      margin: 2rem auto;
+      color: $primary;
+    }
+  }
+  section {
+    color: $dark;
+    margin: 1.5rem auto;
+    @include container-90-center;
+    .wpcf7-validation-errors,
+    .wpcf7-mail-sent-ng {
+      background: $danger;
+      color: $secondary;
+      border: none;
+    }
+    form {
+      font-size: 1.1rem;
+      input[type="submit"] {
+        font-size: 1.1rem;
+        padding: 0.25rem 1rem;
+        background: $primary;
+        color: $secondary;
+        border: hidden;
+        cursor: pointer;
+      }
+      p {
+        margin-bottom: 1rem;
+        span {
+          input,
+          textarea {
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            font-size: 1.1rem;
+            display: block;
+          }
+        }
+      }
     }
   }
 }
@@ -925,6 +963,73 @@ main#single {
         height: 320px;
         margin: 2rem auto;
       }
+    }
+  }
+  //////////////////////
+  // CONTACT PAGE
+  //////////////////////
+  main#contact {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    header {
+      h1 {
+        margin: 2rem auto;
+        color: $primary;
+      }
+    }
+    section {
+      color: $dark;
+      margin: 1.5rem auto;
+      @include container-90-center;
+      .wpcf7-validation-errors,
+      .wpcf7-mail-sent-ng {
+        background: $danger;
+        color: $secondary;
+        border: none;
+      }
+      form {
+        font-size: 1.1rem;
+        input[type="submit"] {
+          font-size: 1.1rem;
+          padding: 0.25rem 1rem;
+          background: $primary;
+          color: $secondary;
+          border: hidden;
+          cursor: pointer;
+        }
+        p {
+          margin-bottom: 1rem;
+          span {
+            input,
+            textarea {
+              width: 100%;
+              border: 1px solid rgba(0, 0, 0, 0.3);
+              font-size: 1.1rem;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  //////////////////////
+  // INDEX PAGE
+  //////////////////////
+  main#index {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    header {
+      h1 {
+        margin: 2rem auto;
+        color: $primary;
+      }
+    }
+    section {
+      color: $dark;
+      margin: 2rem auto;
+      @include container-90-center;
     }
   }
 }

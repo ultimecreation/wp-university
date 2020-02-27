@@ -1,8 +1,16 @@
 <?php get_header(); ?>
-<br>
-<br>
-<br>
-<br>
 
-<h1>Contact</h1>
+<main id="contact">
+    <div class="container">
+        <?php if (have_posts()) : the_post(); ?>
+            <header>
+                <h1> <?php the_title(); ?></h1>
+            </header>
+            <section>
+                <?php the_content(); ?>
+            </section>
+        <?php endif; ?>
+    </div>
+
+</main>
 <?php get_footer(); ?>
