@@ -167,6 +167,7 @@ main#front-page {
       transform: translate(-50%, -50%);
       input {
         height: 2rem;
+        font-size: 0.9rem;
         margin: 0;
         border: none;
         &[type="submit"] {
@@ -174,6 +175,7 @@ main#front-page {
           background: $danger;
           color: $secondary;
           font-weight: bold;
+          text-transform: uppercase;
           cursor: pointer;
         }
       }
@@ -550,7 +552,10 @@ main#index {
 main#single {
   padding-top: 5rem;
   header {
-    color: $primary;
+    h1 {
+      margin: 2rem auto;
+      color: $primary;
+    }
   }
   article {
     color: $dark;
@@ -558,10 +563,7 @@ main#single {
     padding: 1rem;
     box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
     @include container-90-center;
-    h2 {
-      margin: 2rem auto;
-      color: $primary;
-    }
+
     .date-hour {
       margin: 2rem auto;
       display: flex;
@@ -617,6 +619,7 @@ main#single {
         input {
           height: 2rem;
           margin: 0;
+          font-size: 1.1rem;
           border: none;
           &:nth-of-type(1) {
             width: 400px;
@@ -828,6 +831,33 @@ main#single {
         background: $danger;
         color: $secondary;
         padding: 2.5rem 2.5rem 1rem 2.5rem;
+      }
+    }
+  }
+  //////////////////////
+  // SINGLE PAGE
+  //////////////////////
+  main#single {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    header {
+      h1 {
+        margin: 2rem auto;
+        color: $primary;
+      }
+    }
+    article {
+      color: $dark;
+      margin: 2rem auto;
+      padding: 1rem;
+      box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
+      @include container-90-center;
+
+      .date-hour {
+        margin: 2rem auto;
+        display: flex;
+        justify-content: space-around;
       }
     }
   }
