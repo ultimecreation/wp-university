@@ -565,12 +565,22 @@ main#single {
     margin: 2rem auto;
     padding: 1rem;
     box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
-
+  }
+  #single-event {
+    @include container-90-center;
     .date-hour {
       margin: 2rem auto;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
     }
+    img {
+      width: 100%;
+      height: 300px;
+      margin: 2rem auto;
+    }
+  }
+  #single-program {
+    @include container-90-center;
   }
   #single-campus {
     @include container-90-center;
@@ -578,6 +588,19 @@ main#single {
       width: 100%;
       height: 320px;
       margin: 2rem auto;
+    }
+  }
+  #single-professor {
+    display: flex;
+    flex-direction: column-reverse;
+    @include container-90-center;
+    .img {
+      align-self: center;
+      img {
+      }
+    }
+    .content {
+      padding: 1rem;
     }
   }
 }
@@ -851,25 +874,43 @@ main#single {
     padding-top: 5rem;
     display: flex;
     flex-direction: column;
+
     header {
       h1 {
         margin: 2rem auto;
         color: $primary;
       }
     }
-    article#single-professor {
+    #single-event {
       display: flex;
-      padding: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      .content {
+        width: 90%;
+        padding: 1rem;
+        .date-hour {
+          margin: 2rem auto;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      img {
+        width: 90%;
+        height: 300px;
+        margin: 2rem auto;
+      }
+    }
+    #single-professor {
       .img {
         position: relative;
-        top: -4rem;
-        height: 100%;
+        top: -2rem;
+        right: -6rem;
         img {
           box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
         }
       }
       .content {
-        padding: 1rem;
       }
     }
     #single-campus {
